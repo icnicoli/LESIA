@@ -62,7 +62,7 @@
 
         .image-placeholder {
             width: 100%;
-            padding-bottom: 75%; /* 4:3 aspect ratio */
+            padding-bottom: 75%; 
             background-color: #ddd;
             position: relative;
             overflow: hidden;
@@ -120,7 +120,7 @@
         }
 
         #exchange-rates-container {
-            margin-left: 30px; /* Adjust the margin as needed */
+            margin-left: 30px;
             display: flex;
             flex-direction: column;
             align-items: left;
@@ -230,14 +230,14 @@
             </div>
         </div>
     </div>
-    <!-- Add more columns and image placeholders as needed -->
+
 </div>
 
 <div id="text-content">
     <h2>If the world is ending you'd come over... right?</h2>
     <p>JP Saxe and Julia Michaels enlisted a handful of their celebrity friends as they performed "If the World Was Ending" in support of Doctors Without Borders. The video features appearances from Niall Horan, Sam Smith, Kesha, Noah Cyrus, and many more artists as they put their own spin on the song about wanting to be with the people you love during hard times. 
         The group number comes after real-life couple Michaels and Saxe gave a stirring performance of the song at their home.</p>
-    <!-- Add more lorem ipsum content as needed -->
+  
 </div>
 
 <div class="container">
@@ -246,7 +246,7 @@
         
 
         <script>
-            // This code loads the IFrame Player API code asynchronously.
+            
             var tag = document.createElement('script');
             tag.src = "https://www.youtube.com/iframe_api";
             var firstScriptTag = document.getElementsByTagName('script')[0];
@@ -287,7 +287,7 @@
 
 <div id="exchange-rates-container">
     <?php
-    // Replace the "YOUR_ACCESS_KEY" below with your actual access key from the Exchange Rates API
+
     $accessKey = "https://v6.exchangerate-api.com/v6/d55044ff2806c0a91014ef47/latest/USD";
     $baseCurrency = "USD";
     $apiUrl = "https://open.er-api.com/v6/latest/{$baseCurrency}";
@@ -313,7 +313,7 @@
         echo '</thead>';
         echo '<tbody>';
         foreach ($data['rates'] as $currency => $rate) {
-            // Assuming $currency is the country code (e.g., USD)
+            
             $flagEmoji = getFlagEmoji($currency);
             echo "<tr>";
             echo "<td><span class='flag-emoji'>{$flagEmoji}</span>{$currency}</td>";
@@ -328,8 +328,8 @@
     }
 
     function getFlagEmoji($countryCode) {
-        // Unicode Regional Indicator Symbols range from U+1F1E6 to U+1F1FF
-        $offset = 0x1F1A5; // Offset to convert ASCII to Regional Indicator Symbols
+     
+        $offset = 0x1F1A5; 
         $asciiOffset = ord('A');
 
         $emojiFlag = '';
@@ -345,11 +345,8 @@
 </div>
 
 <script>
-    // ... (your existing script) ...
-
-    // Function to refresh exchange rates
+    
     function refreshExchangeRates() {
-        // You may want to add loading indicators or other UI feedback here
         location.reload();
     }
 </script>
